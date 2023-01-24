@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+$color-primary: #6998ab;
+$color-secondary: #406882;
+$color-light-blue: #b1d0e0;
+$color-light-blue-1: #e6eaec;
+$color-dark-blue: #1a374d;
+$color-dark-dark-blue: #102331;
+$color-pink-sunset: #ac8e98;
+$color-light-pink: #ebe0e4;
+$color-gray-dark: #777;
+$color-gray-light: #d0d0d0;
+$color-white: #fff;
+$color-black: #000000;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+}
+
+.hero-component__image {
+  height: 80vh;
+  background: linear-gradient(
+      to right bottom,
+      rgba($color-dark-blue, 0.4),
+      rgba($color-pink-sunset, 0.1)
+    ),
+    url("./views/assets/img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-component__container {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .hero-component__text {
+    font-size: 100px;
+    font-weight: 500;
+    color: $color-light-blue-1;
+  }
+  .hero-component__description {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: -16px;
+    color: $color-light-blue-1;
+  }
+}
+
+.menu-component__container {
+  height: 900px;
+  background-color: $color-dark-dark-blue;
+  position: relative;
+
+  &__small {
+    height: 500px;
+  }
+  &__very-small {
+    height: 250px;
+    margin-bottom: 64px;
+  }
+
+  .menu-component__border {
+    font-family: "Lato", sans-serif;
+    position: absolute;
+    height: 600px;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: $color-light-pink solid 2px;
+
+    &__small {
+      border: none;
+      height: 400px;
+    }
+    &__very-small {
+      border: none;
+      height: 150px;
+    }
+
+    .menu-component__text {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      font-weight: 500;
+      color: $color-light-blue-1;
+      text-align: center;
+      margin: 48px;
+
+      &__small {
+        margin: 24px;
+      }
+      &__very-small {
+        margin: 0;
+      }
+    }
+    .menu-component__description {
+      font-family: "Lato", sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: $color-light-blue-1;
+      text-align: center;
+      line-height: 48px;
+      margin: 48px;
+      padding-top: 24px;
+
+      &__small {
+        margin: 24px;
+      }
+      &__very-small {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.navigation-component {
+  display: flex;
+  gap: 28px;
+  margin: 10px 36px;
+  font-size: 16px;
+}
+
+.button {
+  &:hover,
+  :active {
+    font-weight: 700;
+  }
+}
+
+.button-add {
+  display: block;
+  width: 250px;
+  height: 50px;
+  align-self: flex-end;
+  margin-bottom: 36px;
+  background-color: $color-dark-blue;
+  border: none;
+  color: $color-white;
+  &:hover,
+  :active {
+    background-color: $color-light-blue-1;
+    color: $color-dark-blue;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 8px 32px 53px -14px rgba(66, 68, 90, 1);
+  }
+}
+
+.button-login {
+  display: block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  padding-top: 16px;
+  margin-bottom: 36px;
+  margin-top: 36px;
+  color: $color-dark-blue;
+  border: none;
+  background-color: $color-white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-registration {
+  display: block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  padding-top: 16px;
+  margin-bottom: 36px;
+  margin-top: 36px;
+  color: $color-dark-blue;
+  border: none;
+  background-color: $color-white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.button-remove {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  text-align: center;
+  padding-top: 16px;
+  height: 50px;
+  align-self: flex-end;
+  margin-bottom: 36px;
+  background-color: $color-dark-blue;
+  border: none;
+  color: $color-white;
+  &:hover,
+  :active {
+    background-color: $color-light-blue-1;
+    color: $color-dark-blue;
+    font-size: 18px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    box-shadow: 8px 32px 53px -14px rgba(66, 68, 90, 1);
+  }
+}
+
+.room {
+  display: flex;
+  gap: 24px;
+  margin: 52px 36px 52px 36px;
+  padding: 24px;
+  border-bottom: #1a374d solid 0.5px;
+}
+
+.people-number,
+.price-box,
+.area-box {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.area-box {
+  margin-bottom: 16px;
+}
+
+.price-img,
+.area-img {
+  margin: 12px;
+}
+
+.menu-component__description_M {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  width: 550px;
+}
+
+.treatment-description {
+  margin-bottom: 16px;
+}
+
+#userdatea,
+#userdated {
+  width: 200px;
+  text-align: center;
+  margin: 2px;
+}
+
+.departure-date,
+.arrival-date {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.cart-object {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 0.5px solid $color-dark-blue;
+  width: 180px;
+  &:last-child {
+    border: none;
+  }
+}
+.value-and-descritpion {
+  display: flex;
+  height: 140px;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 36px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid $color-dark-blue;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart-hotel {
+  text-align: center;
+  margin: 48px 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.login-container {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 64px;
+  border-radius: 16px;
+  background-color: $color-dark-blue;
+  position: relative;
+}
+.login-info {
+  position: absolute;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  left: 50%;
+  top: 6%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: $color-light-blue-1;
+}
+.login-picture {
+  position: absolute;
+  height: 180px;
+  width: 180px;
+  background-color: #ac8e98;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  background: url("./views/assets/img/human.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-description {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: $color-light-blue-1;
+}
+
+.login-description-log {
+  position: absolute;
+  margin-top: 24px;
+  left: 50%;
+  top: 35%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: $color-light-blue-1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
